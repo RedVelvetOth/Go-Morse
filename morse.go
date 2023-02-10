@@ -6,6 +6,8 @@ import (
 	"fmt"
 	"os"
 	"toys/morse/morse"
+
+	"github.com/f1bonacc1/glippy"
 )
 
 func main() {
@@ -17,12 +19,16 @@ func main() {
 		fmt.Println("What do you wanna Demorse: ")
 		reader := bufio.NewReader(os.Stdin)
 		giberish, _ := reader.ReadString('\n')
-		fmt.Printf("%s", morse.Demorser(giberish))
+		memes := morse.Demorser(giberish)
+		glippy.Set(memes)
+		fmt.Printf("%s", memes)
 	} else {
 		fmt.Println("What do you wanna morse: ")
 		reader := bufio.NewReader(os.Stdin)
 		giberish, _ := reader.ReadString('\n')
-		fmt.Printf("%s", morse.Morser(giberish))
+		memes := morse.Morser(giberish)
+		glippy.Set(memes)
+		fmt.Printf("%s", memes)
 	}
 
 }
