@@ -73,7 +73,7 @@ func reversingMap() {
 }
 
 func Demorser(s string) (v string) {
-	for _, x := range strings.ToUpper(s) {
+	for _, x := range s {
 		v = v + reverseMap[string(x)]
 	}
 	return
