@@ -74,7 +74,7 @@ func reversingMap() {
 
 func Demorser(s string) (v string) {
 	reversingMap()
-	for _, x := range s {
+	for _, x := range strings.Fields(s) {
 		v = v + reverseMap[string(x)]
 	}
 	return
