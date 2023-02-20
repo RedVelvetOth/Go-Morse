@@ -89,6 +89,8 @@ func Demorser(s string) (v string) {
 func Gui() {
 	myapp := app.New()
 	mywindow := myapp.NewWindow("Morser Or Demorser")
+	icon, _ := fyne.LoadResourceFromURLString("https://cdn-icons-png.flaticon.com/512/260/260352.png")
+	mywindow.SetIcon(icon)
 
 	input := widget.NewEntry()
 	input.SetPlaceHolder("Do What Ya Wanna do")
